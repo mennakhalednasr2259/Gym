@@ -1,5 +1,8 @@
+@use "sass:string";
+@use "varriable";
+
 $default: #f9f9ff;
-$primary: $theme-color2;
+$primary: varriable.$theme-color2;
 $success: #4cd3e3;
 $info: #38a4ff;
 $warning: #f4e700;
@@ -43,11 +46,11 @@ $black: #000;
 }
 
 @mixin filter($filter-type, $filter-amount) {
-    -webkit-filter: $filter-type+unquote("(#{$filter-amount})");
-    -moz-filter: $filter-type+unquote("(#{$filter-amount})");
-    -ms-filter: $filter-type+unquote("(#{$filter-amount})");
-    -o-filter: $filter-type+unquote("(#{$filter-amount})");
-    filter: $filter-type+unquote("(#{$filter-amount})");
+    -webkit-filter: $filter-type+string.unquote("(#{$filter-amount})");
+    -moz-filter: $filter-type+string.unquote("(#{$filter-amount})");
+    -ms-filter: $filter-type+string.unquote("(#{$filter-amount})");
+    -o-filter: $filter-type+string.unquote("(#{$filter-amount})");
+    filter: $filter-type+string.unquote("(#{$filter-amount})");
 }
 
 @mixin gradient($deg, $args1,$args2){
@@ -796,7 +799,7 @@ h6 {
         }
         &:checked {
             +label {
-                background: url(../img/elements/primary-check.png) no-repeat center center/cover;
+                background: url(/img/elements/primary-check.png) no-repeat center center/cover;
                 border: none;
             }
         }
@@ -833,7 +836,7 @@ h6 {
         }
         &:checked {
             +label {
-                background: url(../img/elements/success-check.png) no-repeat center center/cover;
+                background: url(/img/elements/success-check.png) no-repeat center center/cover;
                 border: none;
             }
         }
@@ -874,7 +877,7 @@ h6 {
         }
         &:checked {
             +label {
-                background: url(../img/elements/disabled-check.png) no-repeat center center/cover;
+                background: url(/img/elements/disabled-check.png) no-repeat center center/cover;
                 border: none;
             }
         }
@@ -911,7 +914,7 @@ h6 {
         }
         &:checked {
             +label {
-                background: url(../img/elements/primary-radio.png) no-repeat center center/cover;
+                background: url(/img/elements/primary-radio.png) no-repeat center center/cover;
                 border: none;
             }
         }
@@ -948,7 +951,7 @@ h6 {
         }
         &:checked {
             +label {
-                background: url(../img/elements/success-radio.png) no-repeat center center/cover;
+                background: url(/img/elements/success-radio.png) no-repeat center center/cover;
                 border: none;
             }
         }
@@ -989,7 +992,7 @@ h6 {
         }
         &:checked {
             +label {
-                background: url(../img/elements/disabled-radio.png) no-repeat center center/cover;
+                background: url(/img/elements/disabled-radio.png) no-repeat center center/cover;
                 border: none;
             }
         }

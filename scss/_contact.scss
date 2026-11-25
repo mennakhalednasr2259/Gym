@@ -1,3 +1,5 @@
+@use "varriable";
+
 /*=================== contact banner start ====================*/
 
 .dropdown .dropdown-menu {
@@ -28,7 +30,7 @@
       color: #2a2a2a;
       a{
         &:hover{
-          color: $theme-color2;
+          color: varriable.$theme-color2;
         }
       }
     }
@@ -132,10 +134,10 @@
 }
 .contact-section{
   padding: 130px 0 100px;
-  @media #{$tab}{
+  @media #{varriable.$tab}{
     padding: 70px 0 40px;
   }
-  @media #{$medium_device}{
+  @media #{varriable.$medium_device}{
     padding: 80px 0 50px;
   }
   .btn_2{
@@ -144,10 +146,8 @@
     border-radius: 50px;
     margin-top: 0;
     &:hover{
-      background-color: $theme-color2;
-      
+      background-color: varriable.$theme-color2;
+
     }
   }
 }
-
-

@@ -1,3 +1,6 @@
+@use "responsive";
+@use "varriable";
+
 .footer{
     background-repeat: no-repeat;
     background-position: center center;
@@ -9,15 +12,15 @@
     .footer_top{
         padding-top: 115px;
         padding-bottom: 129px;
-        @media #{$mobile_device} {
+        @media #{responsive.$mobile_device} {
             padding-top: 60px;
             padding-bottom: 30px;
         }
         .footer_widget{
-            @media #{$mobile_device} {
+            @media #{responsive.$mobile_device} {
                 margin-bottom: 30px;
             }
-            @media #{$tablet_device} {
+            @media #{responsive.$tablet_device} {
                 margin-bottom: 30px;
             }
             .links {
@@ -27,11 +30,11 @@
             .footer_title{
                 font-size: 20px;
                 font-weight: 400;
-                color: $btn-bg;
+                color: varriable.$btn-bg;
                 text-transform: capitalize;
                 margin-bottom: 45px;
-                font-family: $font3;
-                @media #{$mobile_device} {
+                font-family: varriable.$font3;
+                @media #{responsive.$mobile_device} {
                     margin-bottom: 20px;
                 }
             }
@@ -41,7 +44,7 @@
                 color: #fff;
                 text-transform: capitalize;
                 margin-bottom: 40px;
-                @media #{$mobile_device} {
+                @media #{responsive.$mobile_device} {
                     margin-bottom: 20px;
                 }
             }
@@ -55,10 +58,10 @@
                 a{
                     color: #AAB1B7;
                     &:hover{
-                        color: $btn-bg;
+                        color: varriable.$btn-bg;
                     }
                 }
-            
+
             }
             p.footer_text{
                 font-size: 16px;
@@ -70,18 +73,18 @@
                     color: #B2B2B2;
                     font-weight: 400;
                     &:hover{
-                        color: $btn-bg;
-                        border-bottom: 1px solid $btn-bg
+                        color: varriable.$btn-bg;
+                        border-bottom: 1px solid varriable.$btn-bg
                     }
                 }
                 &.doanar{
                     a{
                     font-weight: 500;
                     color: #B2B2B2;
-                    
+
                     &:hover{
-                        color: $btn-bg;
-                        border-bottom: 1px solid $btn-bg
+                        color: varriable.$btn-bg;
+                        border-bottom: 1px solid varriable.$btn-bg
                     }
                     &.first{
                         margin-bottom: 10px;
@@ -98,9 +101,9 @@
                     a{
                         color: #AAB1B7;
                         font-weight: 400;
-                        font-family: $font2;
+                        font-family: varriable.$font2;
                         &:hover{
-                            color: $btn-bg;
+                            color: varriable.$btn-bg;
                         }
                     }
                 }
@@ -118,7 +121,7 @@
                     border: none;
                     border: 1px solid #E8E8E8;
                     border-radius: 30px;
-                    font-family: $font2;
+                    font-family: varriable.$font2;
                     padding-right: 120px;
                     &::placeholder{
                         font-size: 15px;
@@ -136,7 +139,7 @@
                     border: none;
                     font-size: 14px;
                     color: #fff;
-                    background: $btn-bg;
+                    background: varriable.$btn-bg;
                     padding: 10px;
                     padding: 0 22px;
                     cursor: pointer;
@@ -145,14 +148,14 @@
                     right: 5px;
                     font-size: 14px;
                     font-weight: 500;
-                    font-family: $font2;
+                    font-family: varriable.$font2;
                 }
             }
             .newsletter_text{
                 font-size: 14px;
                 color: #AAB1B7;
                 line-height: 26px;
-                font-family: $font2;
+                font-family: varriable.$font2;
             }
         }
     }
@@ -167,17 +170,17 @@
             color: #AAB1B7;
             margin-bottom: 0;
             font-weight: 500;
-            @media #{$mobile_device} {
+            @media #{responsive.$mobile_device} {
                 font-size: 14px;
             }
             a{
-                color: $btn-bg;
+                color: varriable.$btn-bg;
             }
         }
     }
     .socail_links{
         margin-top: 47px;
-        @media #{$mobile_device} {
+        @media #{responsive.$mobile_device} {
             margin-top: 30px;
         }
         ul{
@@ -200,7 +203,7 @@
                     // border: 1px solid #E8E8E8;
                     color: #E8E8E8;
                  &:hover{
-                     color: $btn-bg !important;
+                     color: varriable.$btn-bg !important;
                      border-color: transparent;
                  }
                 }

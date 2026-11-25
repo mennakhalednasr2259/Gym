@@ -1,3 +1,7 @@
+@use "mixins";
+@use "responsive";
+@use "varriable";
+
 .gallery_area{
     overflow: hidden;
     .single_gallery{
@@ -6,17 +10,17 @@
         height: 480px;
         float: left;
         overflow: hidden;
-        @media #{$mobile_device} {
+        @media #{responsive.$mobile_device} {
            height: auto;
            border: none;
            margin-bottom: 0px;
         }
-        @media #{$tablet_device} {
+        @media #{responsive.$tablet_device} {
            height: auto;
            border: none;
            margin-bottom: 0px;
         }
-        @media #{$mid_device} {
+        @media #{responsive.$mid_device} {
            height: 320px;
         }
         .hover_pop{
@@ -26,7 +30,8 @@
             left: 0;
             top: 0;
             z-index: 1;
-            a{
+            a,
+            button{
                 position: absolute;
                 width: 45px;
                 height: 45px;
@@ -40,8 +45,12 @@
                 bottom: 0;
                 top: 0;
                 z-index: 14;
-                @include transform(scale(4));
-                @include transition(.3s);
+                padding: 0;
+                border: 0;
+                background: transparent;
+                cursor: pointer;
+                @include mixins.transform(scale(4));
+                @include mixins.transition(.3s);
                 opacity: 0;
             }
              &:before{
@@ -51,9 +60,9 @@
             left: 0;
             top: 0;
             content: '';
-            background: $btn-bg;
-            @include transform(scale(.8));
-            @include transition(.3s);
+            background: varriable.$btn-bg;
+            @include mixins.transform(scale(.8));
+            @include mixins.transition(.3s);
             z-index: 8;
             opacity: 0;
         }
@@ -62,27 +71,27 @@
         img{
             width: 100%;
             height: 100%;
-            @include transform(scale(1.1));
-            @include transition(.3s);
+            @include mixins.transform(scale(1.1));
+            @include mixins.transition(.3s);
         }
         &.small_img{
             width: 30%;
-            @media #{$mobile_device} {
+            @media #{responsive.$mobile_device} {
                 width: 100%;
             }
-            @media #{$tablet_device}{
+            @media #{responsive.$tablet_device}{
                 width: 50%;
             }
         }
         &.big_img{
             width: 35%;
-           @media #{$mobile_device} {
+           @media #{responsive.$mobile_device} {
             width: 100%;
         }
-        @media #{$tablet_device}{
+        @media #{responsive.$tablet_device}{
             width: 50%;
         }
-           @media #{$mobile_device} {
+           @media #{responsive.$mobile_device} {
                width: 100%;
            }
         }
@@ -95,10 +104,11 @@
         &:hover{
             .hover_pop:before{
                 opacity: .4;
-                @include transform(scale(1));
+                @include mixins.transform(scale(1));
             }
-            .hover_pop a{
-                @include transform(scale(1));
+            .hover_pop a,
+            .hover_pop button{
+                @include mixins.transform(scale(1));
                 opacity: 1;
             }
         }
@@ -109,7 +119,7 @@
     display: block;
     font-size: 34px;
     padding: 42px 0;
-    @media #{$mobile_device} {
+    @media #{responsive.$mobile_device} {
         padding: 20px 0;
         font-size: 20px;
     }

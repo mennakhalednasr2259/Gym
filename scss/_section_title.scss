@@ -1,3 +1,5 @@
+@use "responsive";
+
 .section_title{
     h3{
         font-size: 46px;
@@ -7,27 +9,27 @@
         z-index: 0;
         padding-bottom: 7px;
         text-transform: uppercase;
-        
-        @media #{$mobile_device} {
+
+        @media #{responsive.$mobile_device} {
             font-size: 30px;
             line-height: 36px;
         }
-        @media #{$tablet_device} {
+        @media #{responsive.$tablet_device} {
             font-size: 36px;
             line-height: 42px;
         }
-        @media #{$mid_device} {
+        @media #{responsive.$mid_device} {
             font-size: 35px;
             line-height: 42px;
         }
         br{
-            @media #{$mobile_device} {
+            @media #{responsive.$mobile_device} {
                 display: none;
             }
-            @media #{$tablet_device} {
+            @media #{responsive.$tablet_device} {
                 display: none;
             }
-            @media #{$mid_device} {
+            @media #{responsive.$mid_device} {
                 display: none;
             }
         }
@@ -40,7 +42,7 @@
         font-weight: 400;
         margin-bottom: 0px;
         br{
-            @media #{$mobile_device} {
+            @media #{responsive.$mobile_device} {
                 display: none;
             }
         }
@@ -55,17 +57,17 @@
 }
 .mb-50{
     margin-bottom: 50px;
-    @media #{$mobile_device} {
+    @media #{responsive.$mobile_device} {
         margin-bottom: 40px;
     }
 }
 
 .mb-73{
     margin-bottom: 73px;
-    @media #{$mobile_device} {
+    @media #{responsive.$mobile_device} {
         margin-bottom: 40px;
     }
-    @media #{$tablet_device} {
+    @media #{responsive.$tablet_device} {
         margin-bottom: 40px;
     }
 }

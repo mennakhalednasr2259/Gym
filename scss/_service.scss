@@ -1,3 +1,5 @@
+@use "mixins";
+
 .service_area{
     padding-top: 100px;
     padding-bottom: 70px;
@@ -7,7 +9,7 @@
     .single_service{
         padding: 30px;
         border: 1px solid #E8E8E8;
-        @include transition(.3s);
+        @include mixins.transition(.3s);
         margin-bottom: 30px;
 
         .service_icon{
@@ -16,7 +18,7 @@
             width: 98px;
             height: 98px;
             margin: auto;
-            @include border-radius(50%);
+            @include mixins.border-radius(50%);
             /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0181f5+0,5db2ff+100 */
             background: rgb(1,129,245); /* Old browsers */
             background: -moz-linear-gradient(top,  rgba(1,129,245,1) 0%, rgba(93,178,255,1) 100%); /* FF3.6-15 */
@@ -76,7 +78,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#615cfd', end
 
     }
     .col-xl-4:nth-child(2) .single_service .service_icon{
-        
+
     }
     .col-xl-4:nth-child(6) .single_service .service_icon{
         /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#a64eee+0,3c35ce+100 */

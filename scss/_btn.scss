@@ -1,23 +1,26 @@
+@use "mixins";
+@use "varriable";
+
 .boxed-btn {
 	background: #fff;
-	color: $btn_bg;
+	color: varriable.$btn_bg;
 	display: inline-block;
 	padding: 12px 44px;
-	font-family: $font3;
+	font-family: varriable.$font3;
 	font-size: 16px;
     font-weight: 600;
     border: 0;
-    border: 1px solid $btn_bg;
+    border: 1px solid varriable.$btn_bg;
     letter-spacing: 3px;
     // width: 180px;
     text-align: center;
-    color: $btn_bg !important;
+    color: varriable.$btn_bg !important;
     text-transform: uppercase;
     cursor: pointer;
     &:hover{
-        background: $btn_bg;
+        background: varriable.$btn_bg;
         color: #fff !important;
-        border: 1px solid $btn_bg;
+        border: 1px solid varriable.$btn_bg;
     }
     &:focus{
         outline: none;
@@ -27,28 +30,28 @@
     }
 }
 .boxed-btn3 {
-    background: $btn_bg ;/* IE6-9 */
+    background: varriable.$btn_bg ;/* IE6-9 */
 	color: #fff;
 	display: inline-block;
 	padding: 12px 53px;
-	font-family: $font3;
+	font-family: varriable.$font3;
 	font-size: 16px;
     font-weight: 500;
     border: 0;
     border: 1px solid transparent;
-    @include border-radius(0px);
+    @include mixins.border-radius(0px);
     // width: 180px;
     text-align: center;
     color: #fff;
     text-transform: uppercase;
-    @include transition(.3s);
+    @include mixins.transition(.3s);
     cursor: pointer;
     // letter-spacing: 2px;
     letter-spacing: 2px;
     &:hover{
         background: transparent ; /* IE6-9 */
-        color: $btn_bg !important;
-        border: 1px solid $btn_bg;
+        color: varriable.$btn_bg !important;
+        border: 1px solid varriable.$btn_bg;
     }
     &:focus{
         outline: none;
@@ -62,17 +65,17 @@
 	color: #fff;
 	display: inline-block;
     padding: 13px 27px;
-	font-family: $font3;
+	font-family: varriable.$font3;
 	font-size: 16px;
     font-weight: 600;
     border: 0;
     border: 1px solid #fff;
-    @include border-radius(5px);
+    @include mixins.border-radius(5px);
     // width: 180px;
     text-align: center;
     color: #fff !important;
     text-transform: uppercase;
-    @include transition(.5s);
+    @include mixins.transition(.5s);
     cursor: pointer;
     letter-spacing: 2px;
     &:hover{
@@ -95,16 +98,16 @@
 	color: #fff !important;
 	display: inline-block;
     padding: 14px 47px;
-	font-family: $font3;
+	font-family: varriable.$font3;
 	font-size: 16px;
     font-weight: 500;
     border: 0;
     border: 1px solid #001D38;
-    @include border-radius(0px);
+    @include mixins.border-radius(0px);
     // width: 180px;
     text-align: center;
     text-transform: uppercase;
-    @include transition(.5s);
+    @include mixins.transition(.5s);
     background: #001D38;
     cursor: pointer;
     letter-spacing: 2px;
@@ -126,7 +129,7 @@
 	color: #fff;
 	display: inline-block;
 	padding: 18px 24px;
-	font-family: $font3;
+	font-family: varriable.$font3;
 	font-size: 16px;
     font-weight: 600;
     border: 0;

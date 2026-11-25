@@ -1,8 +1,12 @@
+@use "mixins";
+@use "responsive";
+@use "varriable";
+
 .slider_bg_1{
-    background-image: url(../img/banner/banner.png);
+
 }
 .slider_bg_2{
-    background-image: url(../img/banner/banner2.png);
+
 }
 .slider_area{
     position: relative;
@@ -12,14 +16,14 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
-        @media #{$mobile_device} {
+        @media #{responsive.$mobile_device} {
             height: auto;
         }
-        @media #{$tablet_device} {
+        @media #{responsive.$tablet_device} {
             height: 600px;
         }
         .slider_text{
-            @media #{$mobile_device}{
+            @media #{responsive.$mobile_device}{
                margin: 100px 0 50px 0;
             }
             span{
@@ -27,10 +31,10 @@
                 font-weight: 400;
                 color: #FFFFFF;
                 text-transform: uppercase;
-                font-family: $font1;
+                font-family: varriable.$font1;
             }
             h3{
-            font-family: $font1;
+            font-family: varriable.$font1;
             font-size: 153px;
             text-transform: uppercase;
             font-weight: 400;
@@ -41,15 +45,15 @@
              span{
                  font-weight: 700;
              }
-             @media #{$mobile_device} {
+             @media #{responsive.$mobile_device} {
                font-size: 30px;
             //    letter-spacing: 3px;
             line-height: 45px;
             }
-             @media #{$tablet_device} {
+             @media #{responsive.$tablet_device} {
                 font-size: 54px;
             }
-             @media #{$mid_device} {
+             @media #{responsive.$mid_device} {
                font-size: 100px;
             }
             }
@@ -59,39 +63,39 @@
                 color: #FFF;
                 margin-bottom: 34px;
                 margin-top: 10px;
-                font-family: $font2;
-             @media #{$mid_device} {
+                font-family: varriable.$font2;
+             @media #{responsive.$mid_device} {
                 font-size: 16px;
              }
-             @media #{$mobile_device} {
+             @media #{responsive.$mobile_device} {
                 font-size: 16px;
              }
             }
             .video_service_btn> a{
                 margin-right: 15px;
-                @media #{$mobile_device} {
+                @media #{responsive.$mobile_device} {
                     margin-bottom: 20px;
                 }
             }
         }
         .property_form{
-            @media #{$mobile_device}{
+            @media #{responsive.$mobile_device}{
                 margin-bottom: 30px;
             }
             padding: 30px;
             background: rgba(0, 28, 56,0.6);
-            @include border-radius(10px);
+            @include mixins.border-radius(10px);
             .form_wrap{
-                @media #{$mobile_device} {
+                @media #{responsive.$mobile_device} {
                     display: block !important;
                 }
-                @media #{$tablet_device} {
+                @media #{responsive.$tablet_device} {
                     -ms-flex-wrap: wrap;
                     flex-wrap: wrap;
                 }
             }
         }
-    } 
+    }
     .serach_icon a {
         width: 45px;
         height: 45px;
@@ -101,35 +105,35 @@
         color: #fff;
         border-radius: 5px;
         display: inline-block;
-        @media #{$mobile_device} {
+        @media #{responsive.$mobile_device} {
             width: 100%;
             margin-bottom: 15px;
         }
-        @media #{$tablet_device} {
+        @media #{responsive.$tablet_device} {
             width: 50%;
          }
     }
     .serach_icon {
-        @include flexbox();
-        @include align-items(end);
-        @media #{$mobile_device} {
+        @include mixins.flexbox();
+        @include mixins.align-items(end);
+        @media #{responsive.$mobile_device} {
             display: block;
         }
-        @media #{$tablet_device} {
+        @media #{responsive.$tablet_device} {
            width: 50%;
             align-items: center;
             margin-top: 12px;
         }
     }
     .single-field{
-        @media #{$tablet_device} {
+        @media #{responsive.$tablet_device} {
             margin-bottom: 20px;
         }
         &.range_slider{
             width: 100%;
             #slider{
                 margin: 0;
-                
+
             }
         }
 
@@ -139,14 +143,14 @@
         }
         &.max_width{
             margin-right: 24px;
-            @media #{$mobile_device} {
+            @media #{responsive.$mobile_device} {
                 margin-right: 0;
             }
             label{
                 display: block;
                 font-size: 15px;
                 color: #FDAE5C;
-                
+
             }
             .nice-select.wide {
                 width: 166px;
@@ -157,7 +161,7 @@
                 border: 1px solid rgba(255,255,255,.40);
                 height: 45px;
                 line-height: 45px;
-                @media #{$mobile_device} {
+                @media #{responsive.$mobile_device} {
                     width: 100%;
                     margin-bottom: 15px;
                 }
@@ -182,7 +186,7 @@
         }
         &.min_width{
             margin-right: 24px;
-            @media #{$mobile_device} {
+            @media #{responsive.$mobile_device} {
                 margin-right: 0;
                 margin-bottom: 20px;
             }
@@ -190,7 +194,7 @@
                 display: block;
                 font-size: 15px;
                 color: #FDAE5C;
-                
+
             }
             .nice-select.wide {
                 width: 110px;
@@ -201,7 +205,7 @@
                 border: 1px solid rgba(255,255,255,.40);
                 height: 45px;
                 line-height: 45px;
-                @media #{$mobile_device} {
+                @media #{responsive.$mobile_device} {
                     width: 100%;
                     margin-bottom: 15px;
                 }
@@ -231,7 +235,7 @@
         width: 50px;
         color: #fff;
         background-color: transparent;
-        @include border-radius(0);
+        @include mixins.border-radius(0);
         left: 50px;
         font-size: 14px;
         border: none;

@@ -1,3 +1,5 @@
+@use "varriable";
+
 /* Normal desktop :1200px. */
 $large_device:'(min-width: 1200px) and (max-width: 1500px)';
 
@@ -11,5 +13,4 @@ $tablet_device:'(min-width: 768px) and (max-width: 991px)';
 $mobile_device:'(max-width: 767px)';
 
 /* Large Mobile :480px. */
-$large_mobile:'only screen and (min-width: 480px) and (max-width: 767px)';
-
+varriable.$large_mobile:'only screen and (min-width: 480px) and (max-width: 767px)';

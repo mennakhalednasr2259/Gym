@@ -1,12 +1,16 @@
+@use "mixins";
+@use "responsive";
+@use "varriable";
+
 .priscing_area{
     background: #000000;
     padding-bottom: 140px;
     padding-top: 170px;
-    @media #{$mobile_device}{
+    @media #{responsive.$mobile_device}{
         padding-top: 50px;
         padding-bottom: 20px;
     }
-    @media #{$tablet_device}{
+    @media #{responsive.$tablet_device}{
         padding-top: 100px;
         padding-bottom: 70px;
     }
@@ -14,7 +18,7 @@
         background: #1A1A1A;
         padding: 40px 0;
         border: 1px solid transparent ;
-        @include transition(.3s);
+        @include mixins.transition(.3s);
         margin-bottom: 30px;
         .prising_header{
             padding-bottom: 23px;
@@ -26,8 +30,8 @@
             }
             span{
                 position: relative;
-                font-family: $font3;
-                color: $btn-bg;
+                font-family: varriable.$font3;
+                color: varriable.$btn-bg;
                 font-weight: 400;
                 font-size: 30px;
             }
@@ -38,7 +42,7 @@
             padding-bottom: 32px;
             ul{
                 li{
-                    font-family: $font3;
+                    font-family: varriable.$font3;
                     font-size: 16px;
                     font-weight: 500;
                     line-height: 40px;
@@ -55,7 +59,7 @@
             }
         }
         &:hover{
-            border: 1px solid $btn-bg ;
+            border: 1px solid varriable.$btn-bg ;
         }
     }
 

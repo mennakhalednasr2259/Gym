@@ -1,8 +1,12 @@
+@use "mixins";
+@use "responsive";
+@use "varriable";
+
 .cat_bg_1{
-    background-image: url(../img/catagory/1.png);
+
 }
 .cat_bg_2{
-    background-image: url(../img/catagory/2.png);
+
 }
 .catagory_area{
     .single_catagory{
@@ -11,18 +15,18 @@
         background-repeat: no-repeat;
         padding: 186px 0;
         background-size: 100% 100%;
-        @include transition(.3s);
-        @media #{$mobile_device} {
+        @include mixins.transition(.3s);
+        @media #{responsive.$mobile_device} {
             padding: 136px 0;
         }
-        @media #{$tablet_device} {
+        @media #{responsive.$tablet_device} {
             padding: 136px 20px;
         }
         h3{
             font-size: 40px;
             color: #fff;
             font-weight: 400;
-            font-family: $font1;
+            font-family: varriable.$font1;
             text-transform: uppercase;
             margin-bottom: 0;
         }
@@ -32,14 +36,14 @@
             color: #fff;
             margin: 16px 0 24px 0;
             br{
-                @media #{$mobile_device}{
+                @media #{responsive.$mobile_device}{
                     display: none;
                 }
-                @media #{$tablet_device}{
+                @media #{responsive.$tablet_device}{
                     display: none;
                 }
             }
-            
+
         }
         a{
 

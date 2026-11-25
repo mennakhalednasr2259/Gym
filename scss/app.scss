@@ -1,0 +1,104 @@
+@use 'tokens' as *;
+
+.skip-link {
+  position: fixed;
+  z-index: 9999;
+  top: 1rem;
+  left: 1rem;
+  padding: .75rem 1rem;
+  color: #fff;
+  background: $gym-color-mobile-menu;
+  transform: translateY(-180%);
+}
+
+.skip-link:focus { transform: translateY(0); }
+:focus-visible { outline: 3px solid $gym-color-focus !important; outline-offset: 3px; }
+.form-status:empty { display: none; }
+.footer .socail_links ul li span,
+.team_area .single_team .team_thumb .team_hover .hover_inner ul li span {
+  display: inline-block;
+  color: inherit;
+}
+.blog_right_sidebar .cat-list li > span,
+.blog_right_sidebar .tag_cloud_widget .tag_cloud span { color: inherit; }
+.form-honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+.mobile-menu-control { display: flex; justify-content: flex-end; }
+.menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .45rem .7rem;
+  border: 1px solid rgba(255, 255, 255, .6);
+  color: #fff;
+  background: transparent;
+}
+.mobile-navigation {
+  position: absolute;
+  z-index: 20;
+  top: 100%;
+  right: 0;
+  padding: .5rem 1rem 1rem;
+  background: $gym-color-mobile-menu;
+}
+.mobile-navigation nav { display: grid; }
+.mobile-navigation a {
+  padding: .55rem .25rem;
+  color: #fff;
+  font-family: Teko, sans-serif;
+  font-size: 1.15rem;
+  text-transform: uppercase;
+}
+.hero-carousel-controls {
+  position: absolute;
+  z-index: 2;
+  bottom: 1.5rem;
+  left: 50%;
+  display: flex;
+  gap: .5rem;
+  transform: translateX(-50%);
+}
+.hero-carousel-controls button {
+  min-width: 2.4rem;
+  min-height: 2.4rem;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  color: #fff;
+  background: rgba(0, 0, 0, .35);
+}
+.gallery-open { border: 0; color: inherit; background: transparent; cursor: pointer; }
+.gallery-lightbox[open] {
+  position: fixed;
+  z-index: 10000;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  max-height: none;
+  margin: auto;
+  padding: 3rem;
+  border: 0;
+  background: $gym-color-overlay;
+  overflow: visible;
+}
+.gallery-lightbox::backdrop { background: transparent; }
+.gallery-lightbox img { max-width: min(90vw, 1100px); max-height: 85vh; object-fit: contain; }
+.gallery-lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  border: 0;
+  color: #fff;
+  background: transparent;
+  font-size: 2.5rem;
+}
+.gallery-lightbox:not([open]) { display: none; }
+

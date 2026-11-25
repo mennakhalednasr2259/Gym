@@ -1,22 +1,22 @@
 
 /* 1. Theme default css */
-@import 'varriable';
-@import 'mixins.scss';
-@import 'responsive';
+@use 'varriable';
+@use 'mixins.scss';
+@use 'responsive';
 body {
-	font-family: $font1;
+	font-family: varriable.$font1;
 	font-weight: normal;
     font-style: normal;
-    
+
 }
 
 .img {
 	max-width: 100%;
-	@include transition(.3s);
+	@include mixins.transition(.3s);
 }
 a,
 .button {
-@include transition(.3s);
+@include mixins.transition(.3s);
 }
 a:focus,
 .button:focus,button:focus {
@@ -38,7 +38,7 @@ button {
 	outline: medium none;
 }
 h1,h2,h3,h4,h5{
-	font-family: $font1;
+	font-family: varriable.$font1;
 	color: #001D38;
 }
 h1 a,
@@ -50,13 +50,13 @@ h6 a {
 	color: inherit;
 }
 a{
-	font-family: $font2;
+	font-family: varriable.$font2;
 }
 input::placeholder{
-	font-family: $font2;
+	font-family: varriable.$font2;
 }
 textarea::placeholder{
-	font-family: $font2;
+	font-family: varriable.$font2;
 }
 ul {
 	margin: 0px;
@@ -71,7 +71,7 @@ p {
 	line-height: 28px;
 	color: #7A838B;
 	margin-bottom: 0px;
-	font-family: $font2;
+	font-family: varriable.$font2;
 }
 
 label {
@@ -236,7 +236,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5db2ff', end
 		width: 50px;
 		color: #707070;
 		background-color: transparent;
-		@include border-radius(50%);
+		@include mixins.border-radius(50%);
 		left: 50px;
 		font-size: 15px;
 		line-height: 50px;
@@ -290,10 +290,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5db2ff', end
 }
 .mb-75{
 	margin-bottom: 75px;
-	@media #{$mobile_device} {
+	@media #{responsive.$mobile_device} {
 		margin-bottom: 30px;
 	}
-	@media #{$tablet_device} {
+	@media #{responsive.$tablet_device} {
 		margin-bottom: 30px;
 	}
 }
